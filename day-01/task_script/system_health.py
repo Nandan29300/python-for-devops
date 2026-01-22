@@ -35,5 +35,5 @@ def check_system(cpu_th, mem_th, disk_th):
         print("Disk is in safe state")
 
 
-cpu_th, mem_th, disk_th = get_thresholds()
-check_system(cpu_th, mem_th, disk_th)
+cpu_th, mem_th, disk_th = get_thresholds()   # get values from get_thresholds function and it returns those values and then → assign to variables (cpu_th,...)
+check_system(cpu_th, mem_th, disk_th)       # pass variables (cpu_th,...) to function check_system as parameters
