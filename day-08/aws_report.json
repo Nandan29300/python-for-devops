@@ -1,0 +1,16 @@
+{
+  "EC2_Instances": [
+    {
+      "InstanceId": "i-0123456789abcdef0",
+      "State": "running"
+    },
+    {
+      "InstanceId": "i-0fedcba9876543210",
+      "State": "stopped"
+    }
+  ],
+  "S3_Buckets": [
+    "my-first-bucket",
+    "devops-logs-bucket"
+  ]
+}
