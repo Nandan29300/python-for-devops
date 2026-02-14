@@ -1,7 +1,5 @@
 # Day 01 – Introduction to Python for DevOps
 
-## Task Completion Report
-
 ### Task Overview
 
 - **Write your first Python script**
@@ -10,21 +8,6 @@
   - Fetch system metrics using a Python library (`psutil`)
   - Compare metrics against thresholds
   - Print the result to the terminal
-
-
-
-### Steps Taken
-
-1. **Created `system_health.py` script**
-2. Used `input()` to get CPU, disk, and memory thresholds from the user
-3. Used `psutil` to fetch current system metrics
-4. Compared metrics against user-provided thresholds with `if`/`else`
-5. Printed results to terminal for each metric
-6. Wrapped metric checks in functions for code clarity
-
-
-
-### Python Script Example
 
 
 import psutil
