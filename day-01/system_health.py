@@ -1,14 +1,5 @@
 # Day 01 – Introduction to Python for DevOps
 
-### Task Overview
-
-- **Write your first Python script**
-- Script requirements:
-  - Take threshold values (CPU, disk, memory) from user input
-  - Fetch system metrics using a Python library (`psutil`)
-  - Compare metrics against thresholds
-  - Print the result to the terminal
-
 
 import psutil
 
