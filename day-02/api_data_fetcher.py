@@ -1,19 +1,6 @@
 # Day 02 – Automating System Tasks with Python
 
 
-### Task Overview
-
-- Use Python to interact with APIs and work with JSON data
-- Script requirements:
-  - Call a public API (e.g., GitHub, JSONPlaceholder)
-  - Use `requests` to get data
-  - Parse and process JSON data
-  - Print results on terminal
-  - Save processed data into a JSON file
-
-
-### Python Script Example
-
 import requests
 import json
 
