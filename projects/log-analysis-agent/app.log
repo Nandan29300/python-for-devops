@@ -1,62 +1,58 @@
 2025-01-10 09:00:01 INFO Application started successfully
 2025-01-10 09:00:05 INFO Connecting to database
 2025-01-10 09:00:07 INFO Database connection established
-
-2025-01-10 09:05:12 WARNING High memory usage detected
-2025-01-10 09:05:15 INFO Memory usage back to normal
-
-2025-01-10 09:10:22 ERROR Failed to fetch user data
-2025-01-10 09:10:25 ERROR Database timeout occurred
-
-2025-01-10 09:15:30 INFO Retrying database connection
+2025-01-10 09:00:10 DEBUG Loading configuration from /etc/app/config.yaml
+2025-01-10 09:00:12 INFO Configuration loaded: env=production, region=us-east-1
+2025-01-10 09:01:00 INFO Health check passed — all services reachable
+2025-01-10 09:05:12 WARNING High memory usage detected: 82%
+2025-01-10 09:05:15 INFO Memory usage back to normal: 61%
+2025-01-10 09:07:30 DEBUG Scheduled task triggered: cache_cleanup
+2025-01-10 09:07:35 INFO Cache cleanup completed — freed 512 MB
+2025-01-10 09:10:22 ERROR Failed to fetch user data: ConnectionResetError
+2025-01-10 09:10:25 ERROR Database timeout occurred after 30s — query: SELECT * FROM users
+2025-01-10 09:10:28 WARNING Retry attempt 1/3 for database query
+2025-01-10 09:10:31 WARNING Retry attempt 2/3 for database query
+2025-01-10 09:10:34 INFO Retry attempt 3/3 succeeded — query returned 200 rows
+2025-01-10 09:15:00 INFO Scheduled backup started
+2025-01-10 09:15:30 INFO Retrying database connection after transient failure
 2025-01-10 09:15:32 INFO Database connection successful
-
-2025-01-10 09:20:45 WARNING Disk usage above 75%
+2025-01-10 09:16:00 INFO Backup completed — 4.2 GB written to s3://backups/2025-01-10
+2025-01-10 09:20:45 WARNING Disk usage above 75%: /dev/sda1 at 77%
 2025-01-10 09:20:50 INFO Disk cleanup initiated
-
-2025-01-10 09:25:10 ERROR Unable to write logs to disk
-2025-01-10 09:25:15 INFO Log rotation completed
-
-2025-01-10 09:30:00 INFO Application shutdown initiated
-2025-01-10 09:30:05 INFO Application stopped
-2025-01-10 09:00:01 INFO Application started successfully
-2025-01-10 09:00:05 INFO Connecting to database
-2025-01-10 09:00:07 INFO Database connection established
-
-2025-01-10 09:05:12 WARNING High memory usage detected
-2025-01-10 09:05:15 INFO Memory usage back to normal
-
-2025-01-10 09:10:22 ERROR Failed to fetch user data
-2025-01-10 09:10:25 ERROR Database timeout occurred
-
-2025-01-10 09:15:30 INFO Retrying database connection
-2025-01-10 09:15:32 INFO Database connection successful
-
-2025-01-10 09:20:45 WARNING Disk usage above 75%
-2025-01-10 09:20:50 INFO Disk cleanup initiated
-
-2025-01-10 09:25:10 ERROR Unable to write logs to disk
-2025-01-10 09:25:15 INFO Log rotation completed
-
-2025-01-10 09:30:00 INFO Application shutdown initiated
-2025-01-10 09:30:05 INFO Application stopped
-
-2025-01-10 09:25:10 ERROR Unable to write logs to disk
-2025-01-10 09:25:15 INFO Log rotation completed
-
-2025-01-10 09:30:00 INFO Application shutdown initiated
-2025-01-10 09:30:05 INFO Application stopped
-
-2025-01-10 09:25:10 ERROR Unable to write logs to disk
-2025-01-10 09:25:15 INFO Log rotation completed
-
-2025-01-10 09:30:00 INFO Application shutdown initiated
-2025-01-10 09:30:05 INFO Application stopped
-
-2025-01-10 09:00:07 INFO Database connection established
-
-2025-01-10 09:05:12 WARNING High memory usage detected
-2025-01-10 09:05:15 INFO Memory usage back to normal
-
-2025-01-10 09:10:22 ERROR Failed to fetch user data
-2025-01-10 09:10:25 ERROR Database timeout occurred
+2025-01-10 09:21:10 INFO Disk cleanup completed — removed 1.8 GB of old logs
+2025-01-10 09:25:10 ERROR Unable to write logs to disk: No space left on device
+2025-01-10 09:25:12 ERROR Log write failure — dropping 142 log entries
+2025-01-10 09:25:15 INFO Log rotation completed — archived app.log.2025-01-09
+2025-01-10 09:25:20 INFO Disk usage after rotation: /dev/sda1 at 54%
+2025-01-10 09:28:00 WARNING SSL certificate expires in 14 days for api.example.com
+2025-01-10 09:30:00 INFO Application shutdown initiated — signal=SIGTERM
+2025-01-10 09:30:05 INFO Flushing in-flight requests (12 pending)
+2025-01-10 09:30:08 INFO All requests completed — graceful shutdown successful
+2025-01-10 09:30:10 INFO Application stopped
+2025-01-10 10:00:01 INFO Application restarted — version=2.3.1
+2025-01-10 10:00:05 INFO Connecting to database
+2025-01-10 10:00:07 INFO Database connection established
+2025-01-10 10:00:09 DEBUG Feature flags loaded: dark_mode=true, new_api=false
+2025-01-10 10:01:00 INFO Health check passed
+2025-01-10 10:05:30 WARNING CPU usage spiked to 91% — possible runaway process
+2025-01-10 10:05:45 WARNING CPU still elevated: 87%
+2025-01-10 10:06:00 INFO CPU usage normalized to 34%
+2025-01-10 10:10:00 ERROR Failed to connect to external payment API: timeout after 10s
+2025-01-10 10:10:30 INFO Retry attempt 1 of 3 for payment API
+2025-01-10 10:11:00 INFO Retry attempt 2 of 3 for payment API
+2025-01-10 10:11:30 INFO Connection to payment API restored
+2025-01-10 10:15:00 DEBUG Scheduled task triggered: session_cleanup
+2025-01-10 10:15:05 INFO Session cleanup: removed 340 expired sessions
+2025-01-10 10:20:00 CRITICAL Disk usage reached 95% on /dev/sdb1 — immediate action required
+2025-01-10 10:20:03 WARNING Auto-cleanup triggered for /var/log
+2025-01-10 10:20:30 INFO Auto-cleanup removed 3.1 GB of compressed logs
+2025-01-10 10:20:45 INFO Disk usage reduced to 71% on /dev/sdb1
+2025-01-10 10:25:00 ERROR Failed to send alert email: SMTP connection refused on port 587
+2025-01-10 10:25:05 WARNING Falling back to SMS alert channel
+2025-01-10 10:25:07 INFO SMS alert sent to on-call engineer: +1-555-0100
+2025-01-10 10:30:00 INFO Health check passed — all services reachable
+2025-01-10 10:35:00 WARNING Response time degraded: /api/v1/users avg=1843ms (threshold=500ms)
+2025-01-10 10:35:30 INFO Response time recovered: /api/v1/users avg=212ms
+2025-01-10 10:45:00 INFO Backup completed successfully — 4.6 GB
+2025-01-10 10:50:00 DEBUG Metrics flushed to monitoring system
+2025-01-10 11:00:00 INFO Application running normally — uptime=1h0m
