@@ -1,0 +1,30 @@
+2025-01-10 09:00:01 INFO Application started successfully
+2025-01-10 09:00:05 INFO Connecting to database
+2025-01-10 09:00:07 INFO Database connection established
+2025-01-10 09:05:12 WARNING High memory usage detected
+2025-01-10 09:05:15 INFO Memory usage back to normal
+2025-01-10 09:10:22 ERROR Failed to fetch user data
+2025-01-10 09:10:25 ERROR Database timeout occurred
+2025-01-10 09:15:30 INFO Retrying database connection
+2025-01-10 09:15:32 INFO Database connection successful
+2025-01-10 09:20:45 WARNING Disk usage above 75%
+2025-01-10 09:20:50 INFO Disk cleanup initiated
+2025-01-10 09:25:10 ERROR Unable to write logs to disk
+2025-01-10 09:25:15 INFO Log rotation completed
+2025-01-10 09:30:00 INFO Application shutdown initiated
+2025-01-10 09:30:05 INFO Application stopped
+2025-01-10 10:00:01 INFO Application restarted
+2025-01-10 10:00:10 DEBUG Loading configuration from /etc/app/config.yaml
+2025-01-10 10:01:00 INFO Configuration loaded successfully
+2025-01-10 10:05:30 WARNING CPU usage spiked to 85%
+2025-01-10 10:06:00 INFO CPU usage normalized
+2025-01-10 10:10:00 ERROR Failed to connect to external API: timeout
+2025-01-10 10:10:30 INFO Retry attempt 1 of 3
+2025-01-10 10:11:00 INFO Retry attempt 2 of 3
+2025-01-10 10:11:30 INFO Connection to external API restored
+2025-01-10 10:15:00 DEBUG Scheduled task: log rotation check
+2025-01-10 10:20:00 CRITICAL Disk usage reached 95% — immediate action required
+2025-01-10 10:20:05 WARNING Auto cleanup triggered
+2025-01-10 10:20:30 INFO Cleanup removed 2.3 GB of old logs
+2025-01-10 10:30:00 INFO Health check passed
+2025-01-10 10:45:00 INFO Backup completed successfully

@@ -1,20 +1,24 @@
-from fastapi import FastAPI # Importing FastAPI Class
-from routers import metrics, aws
+from fastapi import FastAPI  # Importing FastAPI Class
+from routers import metrics, aws, logs
 
 app = FastAPI(
     title="Internal DevOps Utilities API",
-    description="This is an Internal API Utitlities App for Monitoring metrics, AWS Usage, Log Analysis, etc",
+    description="This is an Internal API Utilities App for Monitoring Metrics, AWS Usage, Log Analysis, etc.",
     version="1.1.0",
-    doc_url="/docs",
+    docs_url="/docs",
     redoc_url="/redoc"
 )
 
-@app.get("/")
+
+@app.get("/", tags=["Health"])
 def hello():
     """
-    This is a Hello API , just for testing
+    Health check endpoint — confirms the API is running.
     """
-    return {"message":"Hello Dosto, This is DevOps Utilites API"}
+    return {"message": "Hello Dosto, This is DevOps Utilities API 🚀"}
 
-app.include_router(metrics.router)
-app.include_router(aws.router, prefix="/aws")
+
+# ── Routers ──────────────────────────────────────────────
+app.include_router(metrics.router, prefix="/system", tags=["System Metrics"])
+app.include_router(aws.router,     prefix="/aws",    tags=["AWS"])
+app.include_router(logs.router,    prefix="/logs",   tags=["Log Analysis"])

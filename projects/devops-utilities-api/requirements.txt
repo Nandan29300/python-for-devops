@@ -1,4 +1,5 @@
 fastapi
-uvicorn
+uvicorn[standard]
 psutil
 boto3
+python-multipart
